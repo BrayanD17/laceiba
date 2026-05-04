@@ -1,0 +1,349 @@
+.quienes {
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f7f2ea 100%);
+  padding: 110px 80px;
+  overflow: hidden;
+}
+
+.quienes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 76px;
+}
+
+/* IMÁGENES */
+
+.quienes-images {
+  position: relative;
+  min-height: 460px;
+}
+
+.quienes-img-main {
+  position: relative;
+  width: 88%;
+  margin-left: auto;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(54, 32, 20, 0.22);
+  z-index: 2;
+}
+
+.quienes-img-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.35)
+  );
+  pointer-events: none;
+}
+
+.quienes-img-main img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.quienes-img-main:hover img {
+  transform: scale(1.06);
+}
+
+.quienes-img-small {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 210px;
+  height: 170px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 7px solid #fff;
+  box-shadow: 0 18px 40px rgba(54, 32, 20, 0.2);
+  z-index: 4;
+}
+
+.quienes-img-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quienes-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 18px 22px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  z-index: 5;
+}
+
+.badge-number {
+  display: block;
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.badge-text {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  max-width: 120px;
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
+.quienes-floating-card {
+  position: absolute;
+  left: 52px;
+  bottom: 38px;
+  width: 210px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 18px 38px rgba(54, 32, 20, 0.25);
+  z-index: 5;
+}
+
+.quienes-floating-card span {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.quienes-floating-card small {
+  font-size: 12px;
+  line-height: 1.45;
+  opacity: 0.9;
+}
+
+.quienes-deco {
+  position: absolute;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.deco-1 {
+  width: 160px;
+  height: 160px;
+  background: rgba(245, 158, 11, 0.16);
+  top: -20px;
+  right: 18px;
+}
+
+.deco-2 {
+  width: 110px;
+  height: 110px;
+  background: rgba(104, 61, 44, 0.12);
+  bottom: 18px;
+  left: 12px;
+}
+
+/* CONTENIDO */
+
+.quienes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quienes-label {
+  width: fit-content;
+  color: var(--color-secondary);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.quienes-content h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.12;
+  letter-spacing: -0.8px;
+}
+
+.quienes-content > p {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+/* FEATURES */
+
+.quienes-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(104, 61, 44, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 8px 22px rgba(54, 32, 20, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(54, 32, 20, 0.12);
+  border-color: rgba(245, 158, 11, 0.32);
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(245, 158, 11, 0.14);
+  color: var(--color-secondary);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: rotate(-6deg) scale(1.08);
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.feature-item h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.feature-item p {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.55;
+}
+
+/* LINK */
+
+.quienes-link {
+  margin-top: 10px;
+  width: fit-content;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(104, 61, 44, 0.24);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quienes-link:hover {
+  background: var(--color-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(245, 158, 11, 0.28);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .quienes {
+    padding: 90px 40px;
+  }
+
+  .quienes-container {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .quienes-images {
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .quienes-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .quienes-content > p {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 680px) {
+  .quienes {
+    padding: 75px 22px;
+  }
+
+  .quienes-images {
+    min-height: 390px;
+  }
+
+  .quienes-img-main {
+    width: 100%;
+  }
+
+  .quienes-img-main img {
+    height: 360px;
+  }
+
+  .quienes-img-small {
+    width: 155px;
+    height: 130px;
+    top: -18px;
+    left: 12px;
+  }
+
+  .quienes-floating-card {
+    left: 16px;
+    bottom: 18px;
+    width: 185px;
+  }
+
+  .quienes-badge {
+    right: 14px;
+    bottom: 16px;
+    padding: 14px 16px;
+  }
+
+  .badge-number {
+    font-size: 28px;
+  }
+
+  .quienes-content h2 {
+    font-size: 32px;
+  }
+
+  .quienes-features {
+    grid-template-columns: 1fr;
+  }
+}

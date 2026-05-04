@@ -1,0 +1,757 @@
+.productos {
+  background-color: var(--color-light);
+  padding: 90px 80px;
+}
+
+.productos-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.productos-label {
+  color: var(--color-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.productos-header h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.productos-header p {
+  font-size: 15px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.producto-card {
+  background-color: var(--color-card);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.producto-icono {
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.svg-icon {
+  width: 52px;
+  height: 52px;
+  overflow: visible;
+}
+
+.icono-brown {
+  color: var(--color-primary);
+  background: rgba(104, 61, 44, 0.1);
+}
+
+.icono-amber {
+  color: var(--color-secondary);
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.icono-gray {
+  color: #777;
+  background: rgba(120, 120, 120, 0.13);
+}
+
+.svg-icon * {
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.producto-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.producto-card p {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.producto-link {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.producto-link:hover {
+  color: var(--color-secondary);
+}
+
+/* CAMIÓN REALISTA */
+
+.truck-icon {
+  width: 60px;
+  height: 54px;
+}
+
+.icono-blocks .truck-shadow {
+  fill: rgba(0, 0, 0, 0.12);
+  stroke: none;
+}
+
+.icono-blocks .truck-bed,
+.icono-blocks .truck-cabin {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icono-blocks .truck-window {
+  fill: rgba(255, 255, 255, 0.75);
+  stroke: none;
+}
+
+.icono-blocks .truck-bumper {
+  fill: rgba(0, 0, 0, 0.2);
+  stroke: none;
+}
+
+.icono-blocks .wheel-outer {
+  fill: #333;
+  stroke: none;
+}
+
+.icono-blocks .wheel-inner {
+  fill: #f4f1eb;
+  stroke: none;
+}
+
+.icono-blocks .cargo {
+  fill: currentColor;
+  stroke: none;
+  opacity: 0.85;
+}
+
+.icono-blocks .cargo-2 {
+  opacity: 0.72;
+}
+
+.icono-blocks .cargo-3 {
+  opacity: 0.95;
+}
+
+.card-blocks:hover .truck-body {
+  animation: truckBounce 0.75s ease-in-out infinite;
+}
+
+.card-blocks:hover .wheel-outer,
+.card-blocks:hover .wheel-inner {
+  animation: wheelSpin 0.75s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.card-blocks:hover .cargo-1 {
+  animation: cargoLoad1 1s ease-in-out infinite;
+}
+
+.card-blocks:hover .cargo-2 {
+  animation: cargoLoad2 1s ease-in-out infinite;
+}
+
+.card-blocks:hover .cargo-3 {
+  animation: cargoLoad3 1s ease-in-out infinite;
+}
+
+@keyframes truckBounce {
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes wheelSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cargoLoad1 {
+  50% {
+    transform: translate(6px, 10px);
+  }
+}
+
+@keyframes cargoLoad2 {
+  50% {
+    transform: translate(-2px, 10px);
+  }
+}
+
+@keyframes cargoLoad3 {
+  50% {
+    transform: translate(2px, 21px);
+  }
+}
+
+/* CASA */
+
+.icono-house .house-wall {
+  fill: currentColor;
+  stroke: none;
+  opacity: 0.95;
+}
+
+.icono-house .roof {
+  stroke: currentColor;
+  stroke-width: 7;
+  fill: none;
+}
+
+.icono-house .door {
+  fill: #fff;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+.icono-house .door-knob {
+  fill: currentColor;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+.card-house:hover .door,
+.card-house:hover .door-knob {
+  animation: doorOpen 1s ease-in-out infinite;
+}
+
+@keyframes doorOpen {
+  50% {
+    transform: scaleX(0.28) skewY(8deg);
+  }
+}
+
+/* HERRAMIENTAS: MARTILLO + LLAVE */
+
+.tool-icon {
+  width: 56px;
+  height: 56px;
+}
+
+/* llave */
+.icono-wrench .tool-wrench {
+  stroke: currentColor;
+  stroke-width: 5;
+  fill: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* martillo */
+.icono-wrench .hammer-handle {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icono-wrench .hammer-head {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* impacto */
+.icono-wrench .impact {
+  fill: var(--color-secondary);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ANIMACIONES */
+
+.card-wrench:hover .hammer {
+  animation: hammerHit 0.6s ease-in-out infinite;
+  transform-origin: 40px 50px;
+}
+
+.card-wrench:hover .tool-wrench {
+  animation: wrenchReact 0.6s ease-in-out infinite;
+}
+
+.card-wrench:hover .impact {
+  animation: impactFlash 0.6s ease-in-out infinite;
+}
+
+/* HERRAMIENTAS: SIERRA CIRCULAR MÁS REALISTA */
+
+.saw-icon {
+  width: 64px;
+  height: 56px;
+}
+
+.icono-wrench {
+  background: rgba(120, 120, 120, 0.16);
+}
+
+.icono-wrench .wood-piece {
+  fill: #b98555;
+  stroke: none;
+}
+
+.icono-wrench .wood-line {
+  stroke: rgba(104, 61, 44, 0.55);
+  stroke-width: 1.6;
+}
+
+.icono-wrench .wood-cut {
+  stroke: #5a3426;
+  stroke-width: 3;
+}
+
+.icono-wrench .saw-cover {
+  fill: #6f6f6f;
+  stroke: none;
+}
+
+.icono-wrench .saw-top {
+  stroke: #555;
+  stroke-width: 5;
+  fill: none;
+}
+
+.icono-wrench .saw-handle {
+  fill: #4a4a4a;
+  stroke: none;
+}
+
+.icono-wrench .saw-base {
+  fill: #424242;
+  stroke: none;
+}
+
+.icono-wrench .saw-blade-bg {
+  fill: #e8e8e8;
+  stroke: #555;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.icono-wrench .blade-teeth {
+  fill: #f7f7f7;
+  stroke: #555;
+  stroke-width: 1.6;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.icono-wrench .blade-center {
+  fill: #777;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.icono-wrench .dust {
+  fill: var(--color-secondary);
+  stroke: none;
+  opacity: 0;
+}
+
+.card-wrench:hover .saw-body {
+  animation: sawVibrate 0.12s linear infinite;
+}
+
+.card-wrench:hover .saw-blade-bg,
+.card-wrench:hover .blade-teeth,
+.card-wrench:hover .blade-center {
+  animation: bladeSpin 0.35s linear infinite;
+}
+
+.card-wrench:hover .wood-cut {
+  animation: cutLine 0.65s ease-in-out infinite;
+}
+
+.card-wrench:hover .dust-1 {
+  animation: dustFly 0.75s ease-out infinite;
+}
+
+.card-wrench:hover .dust-2 {
+  animation: dustFly 0.75s ease-out infinite 0.12s;
+}
+
+.card-wrench:hover .dust-3 {
+  animation: dustFly 0.75s ease-out infinite 0.24s;
+}
+
+@keyframes sawVibrate {
+  50% {
+    transform: translate(-0.8px, 0.5px);
+  }
+
+  100% {
+    transform: translate(0.8px, -0.5px);
+  }
+}
+
+@keyframes bladeSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cutLine {
+  50% {
+    opacity: 1;
+    stroke-width: 4;
+  }
+}
+
+@keyframes dustFly {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(8px, -6px) scale(1);
+  }
+}
+
+/* ACABADOS: RODILLO PINTANDO */
+
+.paint-icon {
+  width: 64px;
+  height: 56px;
+}
+
+.icono-paint {
+  background: rgba(104, 61, 44, 0.12);
+}
+
+/* pared */
+.icono-paint .wall {
+  fill: #e8e2d8;
+  stroke: none;
+}
+
+/* pintura */
+.icono-paint .paint-fill {
+  fill: var(--color-primary);
+  opacity: 0.9;
+}
+
+/* rodillo */
+.icono-paint .roller-head {
+  fill: currentColor;
+}
+
+.icono-paint .roller-arm,
+.icono-paint .roller-handle {
+  stroke: currentColor;
+  stroke-width: 4;
+  fill: none;
+}
+
+/* gotas */
+.icono-paint .drop {
+  fill: var(--color-secondary);
+  opacity: 0;
+}
+
+/* ANIMACIONES */
+.card-paint:hover .roller {
+  animation: rollerMove 1s ease-in-out infinite;
+}
+
+.card-paint:hover .paint-fill {
+  animation: paintFill 1s ease-in-out infinite;
+}
+
+@keyframes rollerMove {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(16px);
+  }
+}
+
+@keyframes paintFill {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 40px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+/* gotas */
+@keyframes dropFall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px) scale(1);
+  }
+}
+/* CONTENEDOR */
+.faucet-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ICONO */
+.faucet-lucide {
+  width: 38px;
+  height: 38px;
+  color: var(--color-secondary);
+  transition: transform 0.3s ease;
+}
+
+/* ANIMACIÓN DEL GRIFO (más creíble) */
+.card-faucet:hover .faucet-lucide {
+  animation: faucetTurn 0.9s ease-in-out infinite;
+}
+
+/* giro tipo abrir llave */
+@keyframes faucetTurn {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-12deg);
+  }
+
+  70% {
+    transform: rotate(-8deg);
+  }
+}
+
+/* GOTA */
+.faucet-drop {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #3ba7ff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  bottom: -4px;
+  right: 4px;
+  opacity: 0;
+}
+
+/* animación gota */
+.card-faucet:hover .faucet-drop {
+  animation: dropFall 0.9s ease-in infinite;
+}
+
+@keyframes dropFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px) rotate(-45deg) scale(0.6);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(12px) rotate(-45deg) scale(1);
+  }
+}
+
+/* MARTILLO CLAVANDO CLAVO */
+
+.hammer-scene {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.hammer-icon-react {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  color: var(--color-primary);
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transform: rotate(-28deg);
+  transform-origin: 28px 30px;
+}
+
+.wood-base {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  width: 36px;
+  height: 7px;
+  background: #b98555;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.nail-body {
+  position: absolute;
+  left: 32px;
+  bottom: 10px;
+  width: 4px;
+  height: 18px;
+  background: #444;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.nail-head {
+  position: absolute;
+  left: 28px;
+  bottom: 27px;
+  width: 12px;
+  height: 4px;
+  background: #444;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.impact-ring {
+  position: absolute;
+  left: 27px;
+  bottom: 25px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 4;
+}
+
+.card-screw:hover .hammer-icon-react {
+  animation: hammerHit 0.65s ease-in-out infinite;
+}
+
+.card-screw:hover .nail-body,
+.card-screw:hover .nail-head {
+  animation: nailDown 0.65s ease-in-out infinite;
+}
+
+.card-screw:hover .impact-ring {
+  animation: impactRing 0.65s ease-in-out infinite;
+}
+
+@keyframes hammerHit {
+  0%, 100% {
+    transform: rotate(-35deg) translate(-4px, -6px);
+  }
+
+  45% {
+    transform: rotate(4deg) translate(5px, 7px);
+  }
+
+  60% {
+    transform: rotate(-8deg) translate(1px, 2px);
+  }
+}
+
+@keyframes nailDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  45%, 60% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes impactRing {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .productos {
+    padding: 80px 40px;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .productos {
+    padding: 70px 22px;
+  }
+
+  .productos-header h2 {
+    font-size: 30px;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
