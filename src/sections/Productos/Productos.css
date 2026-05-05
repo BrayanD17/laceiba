@@ -121,6 +121,25 @@
 .producto-link:hover {
   color: var(--color-secondary);
 }
+.producto-btn {
+  display: inline;
+  width: fit-content;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.producto-btn:hover {
+  color: var(--color-secondary);
+}
 
 /* CAMIÓN REALISTA */
 

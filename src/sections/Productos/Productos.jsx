@@ -1,5 +1,7 @@
 import './Productos.css';
 import { FaFaucet, FaHammer  } from 'react-icons/fa';
+import { useState } from "react";
+import CatalogoHerramientas from "../catalogoHerramientas/CatalogoHerramientas";
 const categorias = [
   {
     tipoIcono: 'blocks',
@@ -164,6 +166,12 @@ function ProductoIcono({ tipo, color }) {
 }
 
 function Productos() {
+  const [mostrarCatalogo, setMostrarCatalogo] = useState(false);
+
+  if (mostrarCatalogo) {
+    return <CatalogoHerramientas volver={() => setMostrarCatalogo(false)} />;
+  }
+
   return (
     <section className="productos" id="productos">
       <div className="productos-header">
@@ -181,7 +189,19 @@ function Productos() {
             <ProductoIcono tipo={cat.tipoIcono} color={cat.color} />
             <h3>{cat.titulo}</h3>
             <p>{cat.descripcion}</p>
-            <a href="#contacto" className="producto-link">Ver productos →</a>
+
+            {cat.titulo === "Herramientas" ? (
+              <button
+                className="producto-link producto-btn"
+                onClick={() => setMostrarCatalogo(true)}
+              >
+                Ver productos →
+              </button>
+            ) : (
+              <a href="#contacto" className="producto-link">
+                Ver productos →
+              </a>
+            )}
           </div>
         ))}
       </div>
