@@ -1,7 +1,7 @@
 import './Productos.css';
 import { FaFaucet, FaHammer  } from 'react-icons/fa';
 import { useState } from "react";
-import CatalogoHerramientas from "../catalogoHerramientas/CatalogoHerramientas";
+import CatalogoHerramientas from "../CatalogoHerramientas/CatalogoHerramientas";
 const categorias = [
   {
     tipoIcono: 'blocks',

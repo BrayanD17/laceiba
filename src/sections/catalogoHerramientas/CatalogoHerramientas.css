@@ -329,3 +329,25 @@
     width: 100%;
   }
 }
+.cantidad {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+.estado-catalogo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6f3d2c;
+}
+
+.error-catalogo {
+  color: #b00020;
+}
+
+.modal-caption p {
+  margin-top: 6px;
+  color: #c46a1b;
+  font-weight: 900;
+}
